@@ -30,6 +30,16 @@ const FormikUserForm = withFormik({
             password: password || ''
         };
     },
+//==========Validation Schema==============
+
+validationSchema: Yup.object().shape({
+    username: Yup.string().required('username is required'),
+    password: Yup.string().required('Password is required')
+}),
+
+//==========End Validation Schema===========
+
+
 })(UserForm);
 
 
