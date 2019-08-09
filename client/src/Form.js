@@ -39,6 +39,14 @@ validationSchema: Yup.object().shape({
 
 //==========End Validation Schema===========
 
+handleSubmit(values, { setStatus, resetForm }){
+    axios.post('http://localhost:5000/api/register', values)
+    .then(res =>{
+        setStatus(res.data);
+        resetForm({username:'', password:''})
+    })
+    .catch(err => console.log('error', err.response))
+}
 
 })(UserForm);
 
