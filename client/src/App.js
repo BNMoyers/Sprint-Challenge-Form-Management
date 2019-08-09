@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import FormikUserForm from './Form';
+import RecipeList from './RecipeList';
 
 
 class App extends React.Component {
@@ -12,7 +13,7 @@ class App extends React.Component {
     return (
     <div className="App">
       <FormikUserForm />
-      
+      <RecipeList />
     </div>
   );
 }}

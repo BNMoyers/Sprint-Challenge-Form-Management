@@ -18,14 +18,7 @@ const UserForm = ({ values, errors, touched, handleSubmit }) => {
                 <button type='submit'>Sign Up!</button>
             </Form>
         </div>
-        <div>
-           <h2>Member List</h2>
-           <ul>
-               {users.map(user => (
-                   <li>{user.username}</li>
-               ))}
-           </ul>
-        </div> 
+       
         </>
 
     )
